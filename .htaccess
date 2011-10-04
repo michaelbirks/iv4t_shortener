@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !test.php|info.php
+RewriteRule (.*) index.php
+
