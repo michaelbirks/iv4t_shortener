@@ -1,0 +1,39 @@
+This is the URL shortener for the IV4t project.
+
+
+USAGE
+-----
+
+Submit a POST request to index.php that looks like this:
+
+Array
+(
+    [origin] => This originates from the RetakeThe.net project I'd Vote for This
+    [uuid] => bacb73fb-247a-4d11-8588-64a279f99c75
+)
+
+The Origin string serves as a confirmation that the request has come from a 'legitimate' source
+The uuid string us the UUID we want to insert into the database.
+
+index.php will return the URL for the shortlink
+
+http://{host}/ufb0
+
+{host} is the host where the miniURLS are being served from
+
+There is a test setup at http://iv4t.birks.co.nz (pending DNS propagation)
+and a test submission available at http://iv4t.birks.co.nz/test.php that offers a sample submission to the database.
+
+Direct Page Submission
+----------------------
+
+If you invoke a GET pair of 'original=yes' (e.g. http://iv4t.birks.co.nz/index.php?original=yes)
+You will be presented with the original URL shordener's submission so that you can insert any 
+given URL into the database.
+
+Database Password
+-----------------
+
+The database password in included in an INI file that is parsed in conf.php, 
+but is not included in the GIT repo - it's excluded by .gitignore  
+

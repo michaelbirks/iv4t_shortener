@@ -5,7 +5,6 @@ define('PAGE_TITLE', 'I\'d Vote for That URL Shortener');
 
 // MySQL connection info
 $ini_file = parse_ini_file('db_password.ini');
-print_r($ini_file['DB_PASSWORD']);
 
 define('MYSQL_USER', 'lilurl');
 define('MYSQL_PASS', $ini_file['DB_PASSWORD']);

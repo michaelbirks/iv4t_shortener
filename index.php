@@ -95,8 +95,8 @@ function lilurl() {
 				$msg = '<p class="error">Sorry, but that lil&#180; URL isn\'t in our database.</p>';
 			}
 		} else {
-			//header('Location: ' . IV4T_prepend);
-			$msg = '<p class="error">No ID or override supplied, so will redirect to home of main website.</p>';
+			header('Location: ' . IV4T_prepend);
+			//$msg = '<p class="error">No ID or override supplied, so will redirect to home of main website.</p>';
 		}
 	}
 	
